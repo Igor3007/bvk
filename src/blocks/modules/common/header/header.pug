@@ -1,0 +1,10 @@
+.container
+  .header
+    .header__menu
+      .burger-btn
+    .header__logo: a(href='#'): span(class="logo" style="background-image: url(/img/common/logo.png)" )
+    .header__nav
+      nav
+        ul
+          each item in app.mainMenu
+            li: a(href=item.href)= item.text
