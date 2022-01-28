@@ -27,17 +27,23 @@ mixin fb-slide-video
         a(href='#'): button.btn.btn-line Продукция
 
 mixin fb-slide
-  .fb-slide
+  .fb-slide.fb-slide--image
     .fb-slide__bg
       +pictureResp({
-        w1200: '/img/common/fb-bg',
-        w760: '/img/common/fb-bg',
-        w480: '/img/common/fb-bg',
-        def: '/img/common/fb-bg',
+        w1200: '/img/common/fb-bg2',
+        w760: '/img/common/fb-bg2',
+        w480: '/img/common/fb-bg2',
+        def: '/img/common/fb-bg2',
         lazy: true
       })
     .fb-slide__content
-      .fb-slide__title BVK
-      .fb-slide__desc Профессиональная команда, которая в своей работе ориентируется на зарубежный компьютерный рынок и первой поставляет новинки техники белорусскому потребителю
-      .fb-slide__btn
-        a(href='#'): button.btn.btn-line Продукция
+      .fb-slide__col2
+        .fb-slide__left
+          .fb-slide__title BVK
+          .fb-slide__desc Профессиональная команда, которая в своей работе ориентируется на зарубежный компьютерный рынок и первой поставляет новинки техники белорусскому потребителю
+          .fb-slide__btn
+            a(href='#'): button.btn.btn-line Продукция
+        .fb-slide__right
+          +picture('/img/common/fb-image')
+
+

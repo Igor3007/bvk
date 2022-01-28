@@ -3,6 +3,12 @@
     position: relative;
     overflow: hidden;
 
+    &--image {
+        & .fb-slide__content {
+            background-color: transparent
+        }
+    }
+
     &__bg {
         @include layer(1);
 
@@ -28,6 +34,53 @@
             height: 100%;
             object-fit: cover;
             object-position: center center;
+        }
+    }
+
+    &__col2 {
+        display: flex;
+
+        &>div {
+            width: 50%;
+            align-items: center;
+        }
+    }
+
+    &__left {
+
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        width: 100%;
+
+        @media screen and (min-width: $w992) {
+            display: block;
+        }
+
+        & .fb-slide__title {
+            text-align: left;
+            margin-right: auto;
+        }
+
+        & .fb-slide__desc {
+            text-align: left;
+            margin-left: 0;
+            max-width: 512px;
+            width: 100%;
+        }
+
+        & .fb-slide__btn {
+            text-align: left;
+            margin-right: auto;
+        }
+    }
+
+    &__right {
+        display: none;
+
+        @media screen and (min-width: $w992) {
+            display: block;
         }
     }
 

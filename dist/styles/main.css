@@ -1944,6 +1944,10 @@ footer {
   overflow: hidden;
 }
 
+.fb-slide--image .fb-slide__content {
+  background-color: transparent;
+}
+
 .fb-slide__bg {
   position: absolute;
   top: 0;
@@ -1975,6 +1979,44 @@ footer {
   height: 100%;
   object-fit: cover;
   object-position: center center;
+}
+
+.fb-slide__col2 {
+  display: flex;
+}
+
+.fb-slide__col2 > div {
+  width: 50%;
+  align-items: center;
+}
+
+.fb-slide__left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  width: 100%;
+}
+
+.fb-slide__left .fb-slide__title {
+  text-align: left;
+  margin-right: auto;
+}
+
+.fb-slide__left .fb-slide__desc {
+  text-align: left;
+  margin-left: 0;
+  max-width: 512px;
+  width: 100%;
+}
+
+.fb-slide__left .fb-slide__btn {
+  text-align: left;
+  margin-right: auto;
+}
+
+.fb-slide__right {
+  display: none;
 }
 
 .fb-slide__content {
@@ -2448,6 +2490,14 @@ footer {
 
   .header__nav ul li {
     padding: 0 25px;
+  }
+
+  .fb-slide__left {
+    display: block;
+  }
+
+  .fb-slide__right {
+    display: block;
   }
 
   .item-product__desc {
