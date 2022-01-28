@@ -1,0 +1,74 @@
+.section-block-instagram {
+    @include section-padding;
+}
+
+.block-instagram {
+    &__title {
+        @include section-subtitle;
+        padding-bottom: 55px;
+    }
+
+    &__list {
+        padding: 0 15px;
+
+        @media screen and (min-width: $w992) {
+            padding: 0 25px;
+        }
+
+
+        & ul {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin: -6px;
+
+            @media screen and (min-width: $w1440) {
+                margin: -12px;
+            }
+
+            & li {
+                margin: 6px;
+                display: none;
+                width: 100%;
+
+                width: calc(50% - 12px);
+                margin: 6px;
+
+
+
+                @media screen and (min-width: $w760) {
+                    width: calc(20% - 12px);
+                    margin: 6px;
+                }
+
+                @media screen and (min-width: $w1440) {
+                    width: calc(20% - 24px);
+                    margin: 12px;
+
+                    &:nth-child(-n+5) {
+                        display: block;
+                    }
+                }
+
+                &:nth-child(-n+4) {
+                    display: block;
+                }
+
+                & picture {
+                    padding-top: 100%;
+                    display: block;
+                    background-color: #eee;
+                    position: relative;
+
+                    & img {
+                        @include layer(1);
+                        object-fit: contain;
+                        object-position: center;
+                        max-width: none;
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}

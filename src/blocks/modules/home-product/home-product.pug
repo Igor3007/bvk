@@ -1,0 +1,29 @@
+mixin home-product 
+  section.section-home-product
+    .container
+      .home-product
+        .home-product__left
+          .home-product__max
+            +item-product({title: 'Компьютеры BVK', image:'/img/common/pr-1', desc: 'Компьютерные составляющие для дома и офиса в ассортименте'})
+          .home-product__col2
+            +item-product({title: 'Моноблоки BVK', image:'/img/common/pr-2', desc: false})
+            +item-product({title: 'Корпуса BVK', image:'/img/common/pr-3', desc: false})
+        .home-product__right
+          +all-product()
+          +item-product({title: 'Мониторы BVK', image:'/img/common/pr-2', desc: 'Несколько устройств в одном корпусе, для уменьшения занимаемой площади'})
+
+mixin item-product(data)
+  .item-product
+    .item-product__wrp
+      .item-product__image
+        +picture(data.image)
+      .item-product__text
+        .item-product__title= data.title
+        if(data.desc)
+          .item-product__desc= data.desc
+        .item-product__link
+          a.link-arr(href='#') Узнать стоимость
+
+mixin all-product
+  .all-product
+    .all-product__link: a.link-arr(href='#') Вся продукция BVK

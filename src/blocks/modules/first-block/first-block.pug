@@ -1,0 +1,43 @@
+mixin first-block 
+  section.section-first-block
+    .first-block
+      .first-block__slider
+        .glide(data-glide='fb')
+          .glide__track(data-glide-el='track')
+            .glide__slides
+              .glide__slide: +fb-slide-video()
+              .glide__slide: +fb-slide()
+          .glide__bullets(data-glide-el="controls[nav]")
+            .glide__bullet(data-glide-dir="=0")
+            .glide__bullet(data-glide-dir="=1")
+
+
+
+mixin fb-slide-video
+  .fb-slide
+    .fb-slide__bg
+      video(defaultmuted='' playsinline='' autoplay="" loop='' preload='none' poster='/img/common/fb-bg.jpg' data-keepplaying='1' muted='muted')
+        source(src='pexels-atakan-ozkan-5467579.mp4' type='video/mp4')
+
+
+    .fb-slide__content
+      .fb-slide__title BVK
+      .fb-slide__desc Профессиональная команда, которая в своей работе ориентируется на зарубежный компьютерный рынок и первой поставляет новинки техники белорусскому потребителю
+      .fb-slide__btn
+        a(href='#'): button.btn.btn-line Продукция
+
+mixin fb-slide
+  .fb-slide
+    .fb-slide__bg
+      +pictureResp({
+        w1200: '/img/common/fb-bg',
+        w760: '/img/common/fb-bg',
+        w480: '/img/common/fb-bg',
+        def: '/img/common/fb-bg',
+        lazy: true
+      })
+    .fb-slide__content
+      .fb-slide__title BVK
+      .fb-slide__desc Профессиональная команда, которая в своей работе ориентируется на зарубежный компьютерный рынок и первой поставляет новинки техники белорусскому потребителю
+      .fb-slide__btn
+        a(href='#'): button.btn.btn-line Продукция

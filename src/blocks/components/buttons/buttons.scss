@@ -1,7 +1,7 @@
 .btn {
 
-    padding: 0.8em 1.5em 0.85em 1.5em;
-    background: $red;
+    padding: 0.8em 2.8em 0.85em 2.8em;
+    background: $green;
     color: #fff;
     border: none;
     border-radius: none;
@@ -11,21 +11,18 @@
     align-items: center;
     justify-content: center;
     min-width: rem(130);
-    height: 60px;
-    border-radius: 10px;
+    height: 55px;
 
-    font-style: normal;
     text-transform: uppercase;
-    font-size: 18px;
+    font-size: 15px;
     white-space: nowrap;
+    letter-spacing: 0.05em;
     transition: .3s cubic-bezier(.1, .82, .25, 1);
 
 
 
-
-
     &:hover {
-        background-color: #ED3939;
+        opacity: 0.9;
     }
 
     &:active,
@@ -75,11 +72,11 @@
 
 
     &.btn-line {
-        border: 1px solid $main;
+        border: 2px solid #fff;
         background: none;
         text-transform: uppercase;
         font-weight: bold;
-        color: $main;
+        color: #fff;
 
         & svg {
             fill: $main;
@@ -101,4 +98,25 @@
 
 
 
+}
+
+
+.link-arr {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
+
+    &::after {
+        content: '';
+        background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNiIgaGVpZ2h0PSI5IiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxwYXRoIGQ9Ik00Ljg5NyA0Ljk0NkwxLjU1MyA4LjI4OGEuMzc1LjM3NSAwIDExLS41MzItLjUzTDQuMSA0LjY4IDEuMDIyIDEuNjAzYS4zNzUuMzc1IDAgMTEuNTMxLS41M2wzLjM0NCAzLjM0MmEuMzc5LjM3OSAwIDAxMCAuNTN6IiBmaWxsPSIjNDhBMjE2Ii8+PC9zdmc+);
+        width: 0.8em;
+        height: 0.8em;
+        display: inline-block;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        padding-left: 10px;
+    }
 }

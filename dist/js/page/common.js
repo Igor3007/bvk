@@ -37,31 +37,6 @@ document.addEventListener("DOMContentLoaded", function () {
     })
   })
 
-  /******************************************** 
-  * video
-  ********************************************/
-
-  if(document.querySelector('.video')){
-
-    function youtube_parser(url){
-        var regExp = /^.*((youtu.be\/)|(v\/)|(\/u\/\w\/)|(embed\/)|(watch\?))\??v?=?([^#&?]*).*/;
-        var match = url.match(regExp);
-        return (match&&match[7].length==11)? match[7] : false;
-    }
-
-    let videoElements = document.querySelectorAll('.video')
-
-    videoElements.forEach(function(item){
-      item.addEventListener('click', function(event){
-        let videoID = youtube_parser(this.dataset.id);
-        this.innerHTML = '<iframe src="https://www.youtube.com/embed/' + videoID + '?autoplay=1&autohide=1&border=0&wmode=opaque&enablejsapi=1&rel=0&showinfo=0" allowfullscreen="" width="' + this.clientWidth + 'px" height="' + this.clientHeight + 'px"></iframe>';
-        this.classList.add('play')
-      })
-    })
-
-  }
-
-  /* ============================== */
 
 }); //DOMContentLoaded
 

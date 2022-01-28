@@ -1,6 +1,10 @@
 extends layouts/index
 
- 
+include ../blocks/modules/first-block/first-block
+include ../blocks/modules/home-product/home-product
+include ../blocks/modules/home-news/home-news
+include ../blocks/modules/where-buy/where-buy
+include ../blocks/modules/block-instagram/block-instagram
 
 block variables
   include ../data/data.pug
@@ -9,7 +13,13 @@ block variables
 
 block content
 
- 
+  +first-block()
+  +home-product()
+  +home-news()
+  +where-buy()
+  +block-instagram()
+
+
 
 block scripts
   script(src="/js/page/common.js") 

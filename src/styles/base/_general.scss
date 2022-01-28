@@ -390,24 +390,22 @@ main {
 
 @mixin section-title {
     font-weight: bold;
-    font-size: 36px;
+    font-size: 24px;
     line-height: 117.2%;
     color: #1B1A1C;
 
-    @media screen and (min-width: $w1440) {
-        font-size: 48px;
-    }
+
 
 }
 
 @mixin section-subtitle {
     font-weight: bold;
     font-size: 24px;
-    line-height: 125%;
+    line-height: 117.2%;
     color: #1B1A1C;
 
-    @media screen and (min-width: $w760) {
-        font-size: 38px;
+    @media screen and (min-width: $w992) {
+        font-size: 48px;
     }
 
 }
@@ -439,4 +437,8 @@ main {
     @media screen and (min-width: $w576) {
         padding: 70px 0;
     }
+}
+
+.glide__slides {
+    align-items: stretch;
 }

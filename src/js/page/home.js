@@ -37,31 +37,53 @@
   }
 
   loadScript('/js/lib/glide.min.js', function(){
-    
-
 
   /******************************************** 
-  * data-glide="clients"
+  * data-glide="fb"
   ********************************************/
 
-  const clients =  new Glide('[data-glide="clients"]', {
-    type: 'carousel',
-    startAt: 0,
-    perView: 6,
-    autoplay: 3000
+   var fb = new Glide('[data-glide="fb"]', {
+    type: 'slider',
+    gap: 0,
+    perView: 1,
+    // breakpoints: {
+    //   767: {
+    //     perView: 1,
+    //   },
+    //   1200: {
+    //     perView: 2,
+    //     gap: 30,
+    //   }
+       
+    // },
   })
 
-  clients.mount();
+  fb.mount();
 
+  // document.querySelector('[data-glide-prev="fb"]').addEventListener('click', function(){
+  //   fb.go('<')
+  // })
+  // document.querySelector('[data-glide-next="fb"]').addEventListener('click', function(){
+  //   fb.go('>')
+  // })
+
+  // /* event */
+
+  // let totalSlide = document.querySelectorAll('[data-glide="fb"] .glide__slide:not(.glide__slide--clone)').length
+  // document.querySelector('.fb-counter-total').innerHTML = totalSlide
+
+  // fb.on(['mount', 'run'], function(event) {
+  //   document.querySelector('.fb-counter-current').innerHTML = (fb._i + 1)
+  // })
 
   /******************************************** 
-  * data-glide="review"
+  * data-glide="shop"
   ********************************************/
 
-   var review = new Glide('[data-glide="review"]', {
+   var shop = new Glide('[data-glide="shop"]', {
     type: 'carousel',
     gap: 40,
-    perView: 3,
+    perView: 4,
     breakpoints: {
       767: {
         perView: 1,
@@ -74,23 +96,23 @@
     },
   })
 
-  review.mount();
+  shop.mount();
 
-  document.querySelector('[data-glide-prev="review"]').addEventListener('click', function(){
-    review.go('<')
-  })
-  document.querySelector('[data-glide-next="review"]').addEventListener('click', function(){
-    review.go('>')
-  })
+  // document.querySelector('[data-glide-prev="shop"]').addEventListener('click', function(){
+  //   shop.go('<')
+  // })
+  // document.querySelector('[data-glide-next="shop"]').addEventListener('click', function(){
+  //   shop.go('>')
+  // })
 
-  /* event */
+  // /* event */
 
-  let totalSlide = document.querySelectorAll('[data-glide="review"] .glide__slide:not(.glide__slide--clone)').length
-  document.querySelector('.review-counter-total').innerHTML = totalSlide
+  // let totalSlide = document.querySelectorAll('[data-glide="shop"] .glide__slide:not(.glide__slide--clone)').length
+  // document.querySelector('.shop-counter-total').innerHTML = totalSlide
 
-  review.on(['mount', 'run'], function(event) {
-    document.querySelector('.review-counter-current').innerHTML = (review._i + 1)
-  })
+  // shop.on(['mount', 'run'], function(event) {
+  //   document.querySelector('.shop-counter-current').innerHTML = (shop._i + 1)
+  // })
 
 })
 

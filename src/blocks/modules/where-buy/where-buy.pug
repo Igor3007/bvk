@@ -1,0 +1,25 @@
+mixin where-buy 
+  section.section-where-buy
+    .container
+      .where-buy
+        .where-buy__title Где купить
+        .where-buy__list
+          .glide(data-glide='shop')
+            .glide__track(data-glide-el='track')
+              .glide__slides
+                each item in app.shop
+                  .glide__slide
+                    .where-buy__item: +card-shop(item)
+
+mixin card-shop(data)
+  .card-shop
+    .card-shop__logo
+      +picture(data.logo)
+    .card-shop__title= data.title
+    .card-shop__city= data.city
+    .card-shop__phone
+      ul
+        li: a(href='tel: 8 (029) 333-37-59') 8 (029) 333-37-59
+        li: a(href='tel: 8 (033) 333-37-59') 8 (033) 333-37-59 
+    .card-shop__link
+      a(href='#')= data.link
