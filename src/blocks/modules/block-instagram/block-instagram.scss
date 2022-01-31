@@ -59,6 +59,7 @@
                     display: block;
                     background-color: #eee;
                     position: relative;
+                    z-index: 1;
 
                     & img {
                         @include layer(1);
@@ -67,6 +68,50 @@
                         max-width: none;
                         width: 100%;
                     }
+                }
+            }
+
+            & a {
+
+                position: relative;
+                display: block;
+                color: #fff;
+
+                &:hover {
+                    visibility: visible;
+                    opacity: 1;
+
+                    & span[data-like] {
+                        visibility: visible;
+                        opacity: 1;
+                    }
+                }
+
+                & span {
+
+                    @include layer(2);
+                    background-color: rgba($color: #000000, $alpha: 0.5);
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    color: #fff;
+                    visibility: hidden;
+                    opacity: 0;
+                    transition: 0.5s ease;
+
+
+
+                    &::before {
+                        content: attr(data-like);
+                        color: #fff;
+                        background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZmlsbD0iI2ZmZiIgZD0iTTE3LjE5MiAyLjU2NWguMDAzQTYuMzA1IDYuMzA1IDAgMDEyMy41IDguODdjMCAxLjQ5LS42NDMgMy4wMDItMS42NzIgNC40Ni0xLjAyNyAxLjQ1NS0yLjQxIDIuODE4LTMuODI2IDQuMDAxLTIuODMgMi4zNjYtNS43MjEgMy45NTctNS45MzMgNC4wN2wtLjAyMi4wMTItLjAyLjAxNGEuMDQ3LjA0NyAwIDAxLS4wNTMgMGwtLjAyLS4wMTQtLjAyMy0uMDEyYy0uMjEtLjExMS0zLjEtMS43MjYtNS45MzItNC4xMDMtMS40MTYtMS4xODktMi44LTIuNTU1LTMuODI3LTQuMDA3QzEuMTQyIDExLjgzNi41IDEwLjMzNi41IDguODcxYTYuMzA1IDYuMzA1IDAgMDE2LjMwNS02LjMwNmguMDA2YTYuMTUzIDYuMTUzIDAgMDE0LjgwNCAyLjIybC4zODMuNDYuMzg0LS40NThhNi4yNDQgNi4yNDQgMCAwMTQuODEtMi4yMjJ6Ii8+PC9zdmc+);
+                        background-size: contain;
+                        background-repeat: no-repeat;
+                        padding-left: 27px;
+                        font-weight: bold;
+                        background-position: left center;
+                    }
+
                 }
             }
         }

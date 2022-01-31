@@ -108,6 +108,13 @@
     justify-content: center;
     white-space: nowrap;
 
+    &:hover {
+
+        &::after {
+            transform: translateX(10px);
+        }
+    }
+
     &::after {
         content: '';
         background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNiIgaGVpZ2h0PSI5IiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxwYXRoIGQ9Ik00Ljg5NyA0Ljk0NkwxLjU1MyA4LjI4OGEuMzc1LjM3NSAwIDExLS41MzItLjUzTDQuMSA0LjY4IDEuMDIyIDEuNjAzYS4zNzUuMzc1IDAgMTEuNTMxLS41M2wzLjM0NCAzLjM0MmEuMzc5LjM3OSAwIDAxMCAuNTN6IiBmaWxsPSIjNDhBMjE2Ii8+PC9zdmc+);
@@ -117,6 +124,7 @@
         background-size: contain;
         background-repeat: no-repeat;
         background-position: center;
-        padding-left: 10px;
+        padding-left: 5px;
+        transition: 0.3s ease;
     }
 }

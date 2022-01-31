@@ -9,6 +9,15 @@
 
     document.querySelector('body').classList.remove('perf-no-animation')
 
+    
+
+      window.addEventListener('load', function(){
+          var newVideo = document.getElementById('promo-video');
+          newVideo.play();
+      })
+      
+      
+
   /******************************************** 
   * load swiper
   ********************************************/
@@ -42,40 +51,67 @@
   * data-glide="fb"
   ********************************************/
 
+   function glideCreateBullets(elem, sliderObj){
+      let container = document.querySelector(elem)
+      let countSlides = container.querySelectorAll('.glide__slide').length
+      let bulletContainer = container.querySelector('.glide__bullets')
+
+      for(let i = 0; i<countSlides; i++){
+
+        let itemBullet = document.createElement('div')
+            itemBullet.classList.add('glide__bullet')
+            itemBullet.setAttribute('data-glide-dir', '='+i)
+
+            if(sliderObj._o.autoplay){
+              itemBullet.style.animationDuration = (sliderObj._o.autoplay + 500)+'ms'
+            }
+
+        bulletContainer.appendChild(itemBullet)
+      }
+   }
+
+   function glidePlayVideo(slider, trigger){
+      let self = document.querySelector(slider.selector)
+
+      if(trigger) self.querySelector('video').play() 
+      if(!trigger) self.querySelector('video').pause() 
+   }
+
    var fb = new Glide('[data-glide="fb"]', {
     type: 'slider',
     gap: 0,
     perView: 1,
-    // breakpoints: {
-    //   767: {
-    //     perView: 1,
-    //   },
-    //   1200: {
-    //     perView: 2,
-    //     gap: 30,
-    //   }
-       
-    // },
+    autoplay: 10000,
+    hoverpause: true,
+    animationDuration: 300
+  })
+
+
+
+  fb.on(['mount.before'], function() {
+    glideCreateBullets(fb.selector, fb)
+    glidePlayVideo(fb, true)
+
+  })
+
+  fb.on(['run.before'], function(event) {
+    glidePlayVideo(fb, false)
+  })
+
+  fb.on(['run.after'], function(event) {
+    glidePlayVideo(fb, true)
+  })
+
+  document.querySelector(fb.selector).addEventListener('mouseenter', function(){
+    this.classList.add('stop-animate')
+  })
+  document.querySelector(fb.selector).addEventListener('mouseleave', function(){
+    this.classList.remove('stop-animate')
   })
 
   fb.mount();
 
-  // document.querySelector('[data-glide-prev="fb"]').addEventListener('click', function(){
-  //   fb.go('<')
-  // })
-  // document.querySelector('[data-glide-next="fb"]').addEventListener('click', function(){
-  //   fb.go('>')
-  // })
-
-  // /* event */
-
-  // let totalSlide = document.querySelectorAll('[data-glide="fb"] .glide__slide:not(.glide__slide--clone)').length
-  // document.querySelector('.fb-counter-total').innerHTML = totalSlide
-
-  // fb.on(['mount', 'run'], function(event) {
-  //   document.querySelector('.fb-counter-current').innerHTML = (fb._i + 1)
-  // })
-
+ 
   /******************************************** 
   * data-glide="shop"
   ********************************************/
@@ -84,6 +120,9 @@
     type: 'carousel',
     gap: 40,
     perView: 4,
+    autoplay: 3000,
+    hoverpause: true,
+    animationDuration: 300,
     breakpoints: {
       767: {
         perView: 1,
@@ -94,6 +133,17 @@
       }
        
     },
+  })
+
+  shop.on(['mount.before'], function() {
+    glideCreateBullets(shop.selector, shop)
+  })
+
+  document.querySelector(shop.selector).addEventListener('mouseenter', function(){
+    this.classList.add('stop-animate')
+  })
+  document.querySelector(shop.selector).addEventListener('mouseleave', function(){
+    this.classList.remove('stop-animate')
   })
 
   shop.mount();

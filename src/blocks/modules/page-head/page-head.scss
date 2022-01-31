@@ -1,0 +1,15 @@
+.section-page-head {
+    @include section-padding;
+}
+
+.page-head {
+    &__title {
+        & h1 {
+            @include section-subtitle;
+        }
+    }
+
+    &__breadcrumb {
+        padding-top: 20px;
+    }
+}

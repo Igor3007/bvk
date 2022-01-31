@@ -33,14 +33,15 @@ html(lang="ru")
     link(rel="apple-touch-icon" sizes="1024x1024" href="img/favicons/apple-touch-icon-1024x1024.png")
 
 
-    link(rel="preload" href="/fonts/SourceSansPro/SourceSansPro-Regular.woff2" as="font" crossorigin)
-    link(rel="preload" href="/fonts/SourceSansPro/SourceSansPro-Bold.woff2" as="font" crossorigin)
-    link(rel="preload" href="/fonts/SourceSansPro/SourceSansPro-SemiBold.woff2" as="font" crossorigin)
+    link(rel="preload" href="/fonts/SourceSansPro/UniNeueBold.woff2" as="font" crossorigin)
+    link(rel="preload" href="/fonts/SourceSansPro/UniNeueBook.woff2" as="font" crossorigin)
     link(rel="prefetch" href="/img/sprites/sprite.svg" as="image" crossorigin)
 
     link(rel="stylesheet" href="styles/main.css?v=1.0")
 
-  body
+
+
+  body.perf-no-animation
     header
       block header
         include ../../blocks/modules/common/header/header.pug

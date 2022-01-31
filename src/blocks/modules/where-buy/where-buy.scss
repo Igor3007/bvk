@@ -8,20 +8,50 @@
         padding-bottom: 55px
     }
 
-
     &__item {
-
         background-color: #f4f4f4;
+    }
+
+    & .glide__bullets {
+        top: calc(100% + 25px);
+
+        @media screen and (min-width: $w760) {
+            top: calc(100% + 40px);
+        }
     }
 }
 
 .card-shop {
     padding: 35px;
+    min-height: 350px;
+    position: relative;
+
+    &:hover {
+        &::before {
+            width: 100%;
+            opacity: 1;
+        }
+    }
+
+
+    &::before {
+        content: '';
+        width: 30%;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        height: 1px;
+        background-color: $main;
+        margin: 0 auto;
+        opacity: 0;
+        transition: 0.5s ease;
+    }
 
     &__logo {
-        max-width: 130px;
-        width: 130px;
-        height: 40px;
+        max-width: 120px;
+        width: 120px;
+        height: 70px;
         margin: 0 auto;
 
         margin-bottom: 25px;
@@ -61,6 +91,10 @@
 
         & a {
             color: $green;
+
+            &:hover {
+                text-decoration: underline;
+            }
         }
     }
 }

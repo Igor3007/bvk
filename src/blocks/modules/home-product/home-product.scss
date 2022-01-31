@@ -1,5 +1,5 @@
 .section-home-product {
-    @include section-padding;
+    padding: 10px 0;
 }
 
 .item-product {
@@ -10,6 +10,31 @@
         background-color: #f4f4f4;
         padding: 35px;
         transition: 0.4s ease;
+        position: relative;
+
+        &:hover {
+            &::before {
+                width: 100%;
+                opacity: 1;
+            }
+        }
+
+
+        &::before {
+            content: '';
+            width: 30%;
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            height: 1px;
+            background-color: $main;
+            margin: 0 auto;
+            opacity: 0;
+            transition: 0.5s ease;
+        }
+
+
 
         &:hover {
             background-color: #eee;
@@ -117,13 +142,16 @@
     &__left {
 
         @media screen and (min-width: $w992) {
-            width: 70%;
+            width: 65%;
 
             & .item-product__wrp {
                 display: flex;
                 width: 100%;
                 align-items: center;
                 height: 100%;
+
+                padding-top: 45px;
+                padding-bottom: 45px;
             }
 
             & .item-product__image {
@@ -158,25 +186,29 @@
 
     &__right {
 
-        @media screen and (min-width: $w1440) {
-            & .item-product__wrp {
-                padding-top: 40px;
-                padding-bottom: 90px;
-            }
-        }
-
-        @media screen and (min-width: $w1200) {
-            & .item-product__wrp {
-                padding-top: 55px;
-                padding-bottom: 90px;
-            }
-        }
+        flex-direction: column-reverse;
+        display: flex;
 
         @media screen and (min-width: $w992) {
-            width: 30%;
+            width: 35%;
+            display: flex;
+            flex-direction: column;
 
-            & .item-product__wrp {
-                padding-bottom: 45px;
+            & .item-product {
+                height: 100%;
+
+                &__wrp {
+                    height: 100%;
+                    padding: 30px 30px 40px 30px;
+                }
+
+                &__image {
+                    max-width: 225px;
+
+                    & picture {
+                        padding-top: 95%;
+                    }
+                }
             }
         }
 
@@ -197,8 +229,8 @@
             }
 
             & .item-product__image {
-                width: 30%;
-                min-width: 30%;
+                width: 35%;
+                min-width: 35%;
                 max-width: 80%;
                 margin: 0;
             }

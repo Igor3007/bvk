@@ -8,7 +8,7 @@ gulp.task("smart-grid", (cb) => {
         outputStyle: "scss",
         filename: "_smart-grid",
         columns: 12, // number of grid columns
-        offset: "40px", // gutter width - 20px
+        offset: "24px", // gutter width - 20px
         mobileFirst: true,
         mixinNames: {
             container: "container"

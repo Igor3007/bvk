@@ -26,13 +26,12 @@
     <link rel="apple-touch-icon" sizes="167x167" href="img/favicons/apple-touch-icon-167x167.png">
     <link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon-180x180.png">
     <link rel="apple-touch-icon" sizes="1024x1024" href="img/favicons/apple-touch-icon-1024x1024.png">
-    <link rel="preload" href="/fonts/SourceSansPro/SourceSansPro-Regular.woff2" as="font" crossorigin>
-    <link rel="preload" href="/fonts/SourceSansPro/SourceSansPro-Bold.woff2" as="font" crossorigin>
-    <link rel="preload" href="/fonts/SourceSansPro/SourceSansPro-SemiBold.woff2" as="font" crossorigin>
+    <link rel="preload" href="/fonts/SourceSansPro/UniNeueBold.woff2" as="font" crossorigin>
+    <link rel="preload" href="/fonts/SourceSansPro/UniNeueBook.woff2" as="font" crossorigin>
     <link rel="prefetch" href="/img/sprites/sprite.svg" as="image" crossorigin>
     <link rel="stylesheet" href="styles/main.css?v=1.0">
   </head>
-  <body>
+  <body class="perf-no-animation">
     <header>
       <div class="container">
         <div class="header">
@@ -43,10 +42,10 @@
           <div class="header__nav">
             <nav>
               <ul>
-                <li><a href="services.html">Каталог продукции</a></li>
-                <li><a href="location.html">Новости</a></li>
-                <li><a href="clients.html">Где купить</a></li>
-                <li><a href="projects.html">Для бизнеса</a></li>
+                <li><a href="catalog.html">Каталог продукции</a></li>
+                <li><a href="news.html">Новости</a></li>
+                <li><a href="where-buy.html">Где купить</a></li>
+                <li><a href="for-busines.html">Для бизнеса</a></li>
               </ul>
             </nav>
           </div>
@@ -63,15 +62,17 @@
                   <div class="glide__slide">
                     <div class="fb-slide">
                       <div class="fb-slide__bg">
-                        <video defaultmuted="" playsinline="" autoplay="" loop="" preload="none" poster="/img/common/fb-bg.jpg" data-keepplaying="1" muted="muted">
+                        <video defaultmuted="" playsinline="" loop="" preload="none" poster="/img/common/fb-bg.webp" loading="lazy" data-keepplaying="1" muted="muted">
                           <source src="pexels-atakan-ozkan-5467579.mp4" type="video/mp4"/>
                         </video>
                       </div>
                       <div class="fb-slide__content">
-                        <div class="fb-slide__title">BVK</div>
-                        <div class="fb-slide__desc">Профессиональная команда, которая в своей работе ориентируется на зарубежный компьютерный рынок и первой поставляет новинки техники белорусскому потребителю</div>
-                        <div class="fb-slide__btn"><a href="#">
-                            <button class="btn btn-line">Продукция</button></a></div>
+                        <div class="container">
+                          <div class="fb-slide__title">BVK</div>
+                          <div class="fb-slide__desc">Профессиональная команда, которая в своей работе ориентируется на зарубежный компьютерный рынок и первой поставляет новинки техники белорусскому потребителю</div>
+                          <div class="fb-slide__btn"><a href="#">
+                              <button class="btn btn-line">Продукция</button></a></div>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -89,17 +90,19 @@
                         </picture>
                       </div>
                       <div class="fb-slide__content">
-                        <div class="fb-slide__col2">
-                          <div class="fb-slide__left">
-                            <div class="fb-slide__title">BVK</div>
-                            <div class="fb-slide__desc">Профессиональная команда, которая в своей работе ориентируется на зарубежный компьютерный рынок и первой поставляет новинки техники белорусскому потребителю</div>
-                            <div class="fb-slide__btn"><a href="#">
-                                <button class="btn btn-line">Продукция</button></a></div>
-                          </div>
-                          <div class="fb-slide__right">
-                            <picture>
-                              <source srcset="/img/common/fb-image.webp" type="image/webp"/><img src="/img/common/fb-image.jpg" loading="lazy" alt="image"/>
-                            </picture>
+                        <div class="container">
+                          <div class="fb-slide__col2">
+                            <div class="fb-slide__left">
+                              <div class="fb-slide__title">BVK</div>
+                              <div class="fb-slide__desc">Профессиональная команда, которая в своей работе ориентируется на зарубежный компьютерный рынок и первой поставляет новинки техники белорусскому потребителю</div>
+                              <div class="fb-slide__btn"><a href="#">
+                                  <button class="btn btn-line">Продукция</button></a></div>
+                            </div>
+                            <div class="fb-slide__right">
+                              <picture>
+                                <source srcset="/img/common/fb-image.webp" type="image/webp"/><img src="/img/common/fb-image.jpg" loading="lazy" alt="image"/>
+                              </picture>
+                            </div>
                           </div>
                         </div>
                       </div>
@@ -107,10 +110,7 @@
                   </div>
                 </div>
               </div>
-              <div class="glide__bullets" data-glide-el="controls[nav]">
-                <div class="glide__bullet" data-glide-dir="=0"></div>
-                <div class="glide__bullet" data-glide-dir="=1"></div>
-              </div>
+              <div class="glide__bullets" data-glide-el="controls[nav]"></div>
             </div>
           </div>
         </div>
@@ -228,7 +228,7 @@
                               <li><a href="tel: 8 (033) 333-37-59">8 (033) 333-37-59 </a></li>
                             </ul>
                           </div>
-                          <div class="card-shop__link"><a href="#">www.sli.by</a></div>
+                          <div class="card-shop__link"><a href="#"></a></div>
                         </div>
                       </div>
                     </div>
@@ -268,7 +268,7 @@
                               <li><a href="tel: 8 (033) 333-37-59">8 (033) 333-37-59 </a></li>
                             </ul>
                           </div>
-                          <div class="card-shop__link"><a href="#"></a></div>
+                          <div class="card-shop__link"><a href="#">www.socket.by</a></div>
                         </div>
                       </div>
                     </div>
@@ -294,6 +294,19 @@
                     </div>
                   </div>
                 </div>
+                <div class="glide__bullets" data-glide-el="controls[nav]"></div>
+                <div class="glide__nav" data-glide-el="controls">
+                  <div class="glide__nav-prev" data-glide-dir="&lt;">
+                    <svg width="25" height="25">
+                      <use xlink:href="/img/sprites/sprite.svg#ic_swiper-prev"></use>
+                    </svg>
+                  </div>
+                  <div class="glide__nav-next" data-glide-dir="&gt;">
+                    <svg width="25" height="25">
+                      <use xlink:href="/img/sprites/sprite.svg#ic_swiper-next"></use>
+                    </svg>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -306,26 +319,26 @@
           </div>
           <div class="block-instagram__list">
             <ul>
-              <li><a href="#">
+              <li><a href="https://www.instagram.com/p/CYHB7qyMaF2/" target="_blank">
                   <picture>
                     <source srcset="/img/inst/Rectangle79.webp" type="image/webp"/><img src="/img/inst/Rectangle79.jpg" loading="lazy" alt="image"/>
-                  </picture></a></li>
-              <li><a href="#">
+                  </picture><span data-like="12"></span></a></li>
+              <li><a href="https://www.instagram.com/p/CYHB7qyMaF2/" target="_blank">
                   <picture>
                     <source srcset="/img/inst/Rectangle80.webp" type="image/webp"/><img src="/img/inst/Rectangle80.jpg" loading="lazy" alt="image"/>
-                  </picture></a></li>
-              <li><a href="#">
+                  </picture><span data-like="32"></span></a></li>
+              <li><a href="https://www.instagram.com/p/CYHB7qyMaF2/" target="_blank">
                   <picture>
                     <source srcset="/img/inst/Rectangle81.webp" type="image/webp"/><img src="/img/inst/Rectangle81.jpg" loading="lazy" alt="image"/>
-                  </picture></a></li>
-              <li><a href="#">
+                  </picture><span data-like="44"></span></a></li>
+              <li><a href="https://www.instagram.com/p/CYHB7qyMaF2/" target="_blank">
                   <picture>
                     <source srcset="/img/inst/Rectangle82.webp" type="image/webp"/><img src="/img/inst/Rectangle82.jpg" loading="lazy" alt="image"/>
-                  </picture></a></li>
-              <li><a href="#">
+                  </picture><span data-like="789"></span></a></li>
+              <li><a href="https://www.instagram.com/p/CYHB7qyMaF2/" target="_blank">
                   <picture>
                     <source srcset="/img/inst/Rectangle83.webp" type="image/webp"/><img src="/img/inst/Rectangle83.jpg" loading="lazy" alt="image"/>
-                  </picture></a></li>
+                  </picture><span data-like="15"></span></a></li>
             </ul>
           </div>
         </div>
@@ -347,6 +360,29 @@
         </div>
         <div class="footer__developer"><a href="#"><span>Digital-агентство</span><span class="bgimage" style="background-image: url(/img/common/logo-dev.svg)"></span></a></div>
       </div>
+            <div class="main-menu">
+              <div class="main-menu__wrp">
+                <div class="main-menu__close" data-menu="close">
+                  <svg width="35" height="35">
+                    <use xlink:href="/img/sprites/sprite.svg#ic_cross"></use>
+                  </svg>
+                </div>
+                <div class="main-menu__nav">
+                  <nav>
+                    <ul>
+                      <li><a href="catalog.html">Каталог продукции</a></li>
+                      <li><a href="news.html">Новости</a></li>
+                      <li><a href="where-buy.html">Где купить</a></li>
+                      <li><a href="for-busines.html">Для бизнеса</a></li>
+                    </ul>
+                  </nav>
+                </div>
+                <div class="main-menu__phones">
+                  <div class="main-menu__number"><a href="#">+7 495 799 34 99</a></div>
+                  <div class="main-menu__worktime"><span>Работаем с 9.00 до 19.00</span></div>
+                </div>
+              </div>
+            </div>
     </footer>
     <script src="/js/page/common.js"> </script>
     <script src="/js/page/home.js"> </script>

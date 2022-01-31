@@ -1,0 +1,14 @@
+include ../../components/breadcrumb/breadcrumb.pug
+
+mixin page-head()
+  section.section-page-head
+    .container
+      .page-head
+        .page-head__title
+          h1 Каталог
+        .page-head__breadcrumb
+          +breadcrumb([
+            'Главная',
+            'Каталог',
+          ])
+

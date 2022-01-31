@@ -1,0 +1,19 @@
+extends ../layouts/index
+
+include ../../blocks/modules/page-head/page-head
+include ../../blocks/modules/catalog-category/catalog-category
+
+block variables
+  include ../../data/data.pug
+  - const title = "bvk"
+
+
+block content
+
+  +page-head()
+  +catalog-category()
+
+
+block scripts
+  script(src="/js/page/common.js") 
+

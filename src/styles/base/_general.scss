@@ -79,7 +79,7 @@ main {
     max-width: 375px;
     width: 100%;
     margin: 0 auto;
-    padding: 0 rem(20);
+    padding: 0 rem(28);
     box-sizing: border-box;
 
     &.container--large {
@@ -111,7 +111,7 @@ main {
 
     @media screen and (min-width: $w1440) {
         padding: 0 30px;
-        max-width: 1340px;
+        max-width: 1400px;
     }
 }
 
@@ -428,7 +428,7 @@ main {
 
 
 @mixin section-padding {
-    padding: 40px 0;
+    padding: 55px 0;
 
     @media screen and (min-width: $w576) {
         padding: 70px 0;
@@ -436,5 +436,5 @@ main {
 }
 
 .glide__slides {
-    align-items: stretch;
+    align-items: center;
 }

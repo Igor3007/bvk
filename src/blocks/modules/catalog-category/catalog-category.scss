@@ -1,0 +1,115 @@
+.section-catalog-category {
+    padding-top: 0 !important;
+    padding-bottom: 120px;
+}
+
+$offset: 7px;
+
+.card-category {
+
+    background-color: #F4F4F4;
+    padding: 25px;
+    position: relative;
+
+    &:hover {
+        &::before {
+            width: 100%;
+            opacity: 1;
+        }
+
+        & .card-category__title {
+            color: $main;
+        }
+    }
+
+
+    &::before {
+        content: '';
+        width: 30%;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        height: 1px;
+        background-color: $main;
+        margin: 0 auto;
+        opacity: 0;
+        transition: 0.5s ease;
+    }
+
+    &__image {
+        & picture {
+            padding-top: 100%;
+            display: block;
+            position: relative;
+            mix-blend-mode: multiply;
+
+
+            & img {
+                @include layer(2);
+                object-fit: contain;
+                object-position: center;
+                width: 100%;
+                height: 100%;
+
+                max-width: 70%;
+                max-height: 70%;
+                margin: auto;
+            }
+        }
+    }
+
+    &__title {
+        font-size: 18px;
+        font-weight: bold;
+        text-align: center;
+        @include line-clamp(3);
+        margin-bottom: 10px;
+    }
+
+    &__link {
+        & a {
+            position: absolute;
+            @include layer(2);
+            font-size: 0;
+            opacity: 0;
+        }
+    }
+
+
+}
+
+
+
+.catalog-category {
+    &__list {
+
+
+
+        @media screen and (min-width: $w760) {
+            display: flex;
+            flex-wrap: wrap;
+            margin: -7px;
+        }
+    }
+
+    &__item {
+
+        margin: 7px 0;
+
+        @media screen and (min-width: $w1440) {
+            width: calc(25% - 14px);
+            margin: 7px;
+        }
+
+        @media screen and (min-width: $w992) {
+            width: calc(33.33% - 14px);
+            margin: 7px;
+        }
+
+        @media screen and (min-width: $w760) {
+            width: calc(50% - 14px);
+            margin: 7px;
+        }
+    }
+}

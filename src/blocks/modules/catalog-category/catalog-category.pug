@@ -1,0 +1,15 @@
+mixin catalog-category()
+  section.section-catalog-category
+    .container
+      .catalog-category
+        .catalog-category__list
+          each item in app.category
+            .catalog-category__item: +card-category(item)
+
+mixin card-category(item)
+  .card-category
+    .card-category__image
+      +picture('/img/catalog/'+item.image)
+    .card-category__title= item.text
+    .card-category__link
+      a(href='#') Подробнее

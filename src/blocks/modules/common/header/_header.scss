@@ -1,5 +1,7 @@
 header {
     position: relative;
+    border-bottom: 1px solid #d0d0d0;
+
 }
 
 .header {
@@ -7,11 +9,22 @@ header {
     display: flex;
     align-items: center;
     padding: 10px 0;
-    border-bottom: 1px solid d0d0d0;
 
     &__logo {
 
-        margin-left: 15px;
+        margin-left: auto;
+        margin-right: auto;
+        position: relative;
+        left: -20px;
+
+        @media screen and (min-width: $w760) {
+            margin-left: 15px;
+            margin-right: none;
+            position: static;
+            left: auto;
+        }
+
+
 
         & span {
             width: 78px;
@@ -54,16 +67,34 @@ header {
     &__menu {
         position: relative;
 
-        &::after,
-        &::before {
-            content: '';
-            width: 40px;
-            height: 2px;
-            border-radius: 2px;
-            background: $main;
-            display: block;
-            margin: 10px 0;
+
+        @media screen and (min-width: $w992) {
+            display: none;
         }
+
+        & .burger-btn {
+
+            cursor: pointer;
+            transition: 0.3s ease;
+
+            &.open,
+            &:hover {
+                transform: translateX(-15px);
+            }
+
+            &::after,
+            &::before {
+                content: '';
+                width: 40px;
+                height: 2px;
+                border-radius: 2px;
+                background: $main;
+                display: block;
+                margin: 10px 0;
+            }
+        }
+
+
 
     }
 

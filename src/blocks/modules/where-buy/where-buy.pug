@@ -10,6 +10,11 @@ mixin where-buy
                 each item in app.shop
                   .glide__slide
                     .where-buy__item: +card-shop(item)
+            .glide__bullets(data-glide-el="controls[nav]")
+            .glide__nav(data-glide-el="controls")
+              .glide__nav-prev(data-glide-dir="<"): +icons('#ic_swiper-prev')
+              .glide__nav-next(data-glide-dir=">"): +icons('#ic_swiper-next')
+
 
 mixin card-shop(data)
   .card-shop

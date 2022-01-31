@@ -8,23 +8,23 @@ mixin first-block
               .glide__slide: +fb-slide-video()
               .glide__slide: +fb-slide()
           .glide__bullets(data-glide-el="controls[nav]")
-            .glide__bullet(data-glide-dir="=0")
-            .glide__bullet(data-glide-dir="=1")
+
 
 
 
 mixin fb-slide-video
   .fb-slide
     .fb-slide__bg
-      video(defaultmuted='' playsinline='' autoplay="" loop='' preload='none' poster='/img/common/fb-bg.jpg' data-keepplaying='1' muted='muted')
+      video(defaultmuted='' playsinline='' loop='' preload='none' poster='/img/common/fb-bg.webp' loading="lazy" data-keepplaying='1' muted='muted')
         source(src='pexels-atakan-ozkan-5467579.mp4' type='video/mp4')
 
 
     .fb-slide__content
-      .fb-slide__title BVK
-      .fb-slide__desc Профессиональная команда, которая в своей работе ориентируется на зарубежный компьютерный рынок и первой поставляет новинки техники белорусскому потребителю
-      .fb-slide__btn
-        a(href='#'): button.btn.btn-line Продукция
+      .container
+        .fb-slide__title BVK
+        .fb-slide__desc Профессиональная команда, которая в своей работе ориентируется на зарубежный компьютерный рынок и первой поставляет новинки техники белорусскому потребителю
+        .fb-slide__btn
+          a(href='#'): button.btn.btn-line Продукция
 
 mixin fb-slide
   .fb-slide.fb-slide--image
@@ -37,13 +37,14 @@ mixin fb-slide
         lazy: true
       })
     .fb-slide__content
-      .fb-slide__col2
-        .fb-slide__left
-          .fb-slide__title BVK
-          .fb-slide__desc Профессиональная команда, которая в своей работе ориентируется на зарубежный компьютерный рынок и первой поставляет новинки техники белорусскому потребителю
-          .fb-slide__btn
-            a(href='#'): button.btn.btn-line Продукция
-        .fb-slide__right
-          +picture('/img/common/fb-image')
+      .container
+        .fb-slide__col2
+          .fb-slide__left
+            .fb-slide__title BVK
+            .fb-slide__desc Профессиональная команда, которая в своей работе ориентируется на зарубежный компьютерный рынок и первой поставляет новинки техники белорусскому потребителю
+            .fb-slide__btn
+              a(href='#'): button.btn.btn-line Продукция
+          .fb-slide__right
+            +picture('/img/common/fb-image')
 
 

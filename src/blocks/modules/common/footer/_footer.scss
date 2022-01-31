@@ -61,6 +61,21 @@ footer {
             color: #58575F;
             display: flex;
             align-items: center;
+            flex-direction: column;
+
+            @media screen and (min-width: $w760) {
+                flex-direction: row;
+            }
+
+            & span {
+                &:first-child {
+                    padding-bottom: 10px;
+
+                    @media screen and (min-width: $w760) {
+                        padding-bottom: 0;
+                    }
+                }
+            }
         }
 
         & .bgimage {
