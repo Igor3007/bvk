@@ -1,0 +1,32 @@
+mixin catalog-card
+  section.section-catalog-card
+    .container
+      .catalog-card
+        .catalog-card__wrp
+          .catalog-card__image
+            +picture('/img/catalog/Group17b')
+          .catalog-card__details
+            .catalog-details
+              .catalog-details__title Характеристики
+              .catalog-details__content
+                .catalog-details__props(data-props="container")
+                  ul
+                    each item in app.props
+                      li
+                        span= item.name
+                        span= item.value
+                  .catalog-details__more
+                    span.link-arr(data-props="toggle") Все характеристики 
+            .catalog-details
+              .catalog-details__content
+                .catalog-details__col2
+                  .product-list
+                    .product-list__title Лист продукта
+                    .product-list__link
+                      a.link-arr(href='#') Подробнее
+                  .product-buy
+                    a(href='#') Где купить
+
+
+
+

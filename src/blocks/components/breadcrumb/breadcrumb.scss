@@ -19,11 +19,12 @@
 
             &:hover {
                 text-decoration: underline;
+                color: $main;
             }
         }
 
         &::after {
-            content: '·';
+            content: '-';
             margin: 0 rem(10);
             color: #7A808D;
             display: inline-block;

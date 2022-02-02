@@ -1,0 +1,22 @@
+.section-card-description {
+    @include section-padding;
+}
+
+.card-description {
+    &__title {
+        padding-bottom: 15px;
+        @include section-title;
+    }
+
+    &__text {
+
+        font-size: 14px;
+
+        @media screen and (min-width: $w992) {
+            column-width: 48%;
+            column-count: 2;
+            column-gap: 6%;
+        }
+
+    }
+}

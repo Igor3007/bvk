@@ -1,0 +1,35 @@
+mixin catalog-list
+  section.section-catalog-list
+    .container
+      .catalog-list
+        each item in app.product
+          .catalog-list__item: +minicard(item)
+
+
+mixin minicard(data)
+  .minicard
+    .minicard__wrp
+      .minicard__image
+        a(href='/catalog-card.html')
+          +picture(data.image)
+      .minicard__title: a(href="/catalog-card.html")= data.title
+      .minicard__props
+        ul
+          li
+            span Диагональ экрана (полуматовый): 
+            span 20 "
+          li
+            span Формат матрицы: 
+            span 16:9
+          li
+            span Тип матрицы: 
+            span IPS
+          li
+            span Углы обзора:
+            span 170/170
+          li
+            span Разрешение экрана: 
+            span 1600x900, HD+
+      .minicard__link
+        a(href='/catalog-card.html'): button.btn.btn-line Подробнее
+

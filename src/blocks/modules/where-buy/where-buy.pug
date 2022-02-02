@@ -16,8 +16,8 @@ mixin where-buy
               .glide__nav-next(data-glide-dir=">"): +icons('#ic_swiper-next')
 
 
-mixin card-shop(data)
-  .card-shop
+mixin card-shop(data, point)
+  .card-shop(data-point=""+point+"")
     .card-shop__logo
       +picture(data.logo)
     .card-shop__title= data.title

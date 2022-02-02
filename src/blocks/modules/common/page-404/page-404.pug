@@ -1,17 +1,9 @@
 mixin page-404
   section.section-page-404
-    .page-404 
-      .page-404__bg
-        +pictureResp({
-          w1200: '/img/common/first-block-bg',
-          w760: '/img/common/first-block-bg_760',
-          w480: '/img/common/first-block-bg_480',
-          def: '/img/common/first-block-bg_480',
-          lazy: true
-        })
-      .page-404__content
-        .container
-          .page-404__title Looks like you`re lost, Friend
-          .page-404__subtitle The page you are looking for can`t be found
-          .page-404__btn
-            a(href='/'): button.btn Back to home
+    .container
+      .page-404 
+        .page-404__image: +picture('/img/common/page404')
+        .page-404__title Страница не найдена
+        .page-404__desc Ищете что-то интересное на нашем сайте? К сожалению, страница, которую Вы запрашиваете, не существует
+        .page-404__btn
+          a(href='#'): button.btn.btn-line На главную

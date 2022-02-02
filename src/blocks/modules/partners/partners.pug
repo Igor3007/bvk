@@ -1,0 +1,42 @@
+include ../../modules/where-buy/where-buy.pug
+
+mixin partners
+  section.section-partners
+    .container
+      .partners
+        .partners__desc При закупке товаров мы не обращаемся к посредникам, а работаем на прямую с заводами-производителями, привлекая своих сотрудников и транспорт, это позволяет сэкономить средства наших клиентов.
+        .partners__nav
+          ul(data-tab-nav="partners")
+            li: a(href='#inmap'): span на карте
+            li: a(href='#list'): span список
+
+        .partners__tabs(data-tab-container="partners")
+          .partners__tab-item(data-tab-item="list")
+            .table
+              table
+                tr
+                  th Название
+                  th Город
+                  th Телефон
+                  th Сайт
+
+                each item in app.shop
+                  tr
+                    td= item.title
+                    td= item.city
+                    td
+                      each number in item.phone
+                        a(href='tel:'+number)= number
+                    td: a.link-primary(href='//'+item.link target="_blank")= item.link
+          .partners__tab-item(data-tab-item="inmap")
+            .partners-inmap
+
+              script: include ./partners.js
+
+              .partners-inmap__map
+                span(id="mapcontainer")
+                div.loading: .indeterminate
+              .partners-inmap__list
+                each item in app.shop
+                  .partners-inmap__item: +card-shop(item, item.coordinates)
+

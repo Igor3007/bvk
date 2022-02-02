@@ -1,0 +1,25 @@
+extends ../layouts/index
+
+include ../../blocks/modules/page-head/page-head
+include ../../blocks/modules/catalog-card/catalog-card.pug
+include ../../blocks/modules/card-description/card-description.pug
+
+block variables
+  include ../../data/data.pug
+  - const title = "bvk"
+
+
+block content
+
+  +page-head({
+    title: 'Монитор BVK E200FI-VHS',
+    breadcrumb: [ 'Главная', 'Каталог', 'Мониторы BVK', 'BVK E200FI-VHS' ]
+})
+  +catalog-card()
+  +card-description()
+
+
+block scripts
+  script(src="/js/page/common.js") 
+  script(src="/js/page/catalog-card.js") 
+

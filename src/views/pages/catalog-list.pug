@@ -1,0 +1,22 @@
+extends ../layouts/index
+
+include ../../blocks/modules/page-head/page-head
+include ../../blocks/modules/catalog-list/catalog-list.pug
+
+block variables
+  include ../../data/data.pug
+  - const title = "bvk"
+
+
+block content
+
+  +page-head({
+    title: 'Мониторы BVK',
+    breadcrumb: [ 'Главная', 'Каталог', 'Мониторы BVK' ]
+})
+  +catalog-list()
+
+
+block scripts
+  script(src="/js/page/common.js") 
+

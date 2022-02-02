@@ -10,7 +10,10 @@ block variables
 
 block content
 
-  +page-head()
+  +page-head({
+  title: 'Каталог',
+  breadcrumb: [ 'Главная', 'Каталог' ]
+})
   +catalog-category()
 
 

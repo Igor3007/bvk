@@ -1,0 +1,25 @@
+extends ../layouts/index
+
+include ../../blocks/modules/page-head/page-head
+include ../../blocks/modules/partners/partners
+
+block variables
+  include ../../data/data.pug
+  - const title = "bvk"
+
+
+block content
+
+  +page-head({
+    title: 'Партнерам',
+    breadcrumb: [ 'Главная', 'Партнерам']
+  })
+
+  +partners()
+
+
+block scripts
+  script(src="/js/page/common.js") 
+  script(src="/js/lib/YMaps.js") 
+  script(src="/js/page/partners.js") 
+

@@ -1,0 +1,21 @@
+extends ../layouts/index
+
+include ../../blocks/modules/page-head/page-head
+
+block variables
+  include ../../data/data.pug
+  - const title = "bvk"
+
+
+block content
+
+  +page-head({
+  title: 'Новости',
+  breadcrumb: [ 'Главная', 'Новости' ]
+})
+
+
+
+block scripts
+  script(src="/js/page/common.js") 
+

@@ -1,0 +1,179 @@
+.section-partners {
+    padding-bottom: 100px;
+}
+
+.partners {
+
+    &__desc {
+        font-size: 14px;
+        max-width: 1000px;
+        margin-right: auto;
+        padding-bottom: rem(25);
+    }
+
+    &__nav {
+        padding-bottom: rem(25);
+
+        & ul {
+            display: flex;
+
+            & li {
+
+                margin-right: 5px;
+                cursor: pointer;
+
+                &.active {
+                    & span {
+                        border: 1px solid $main;
+                        color: $main;
+                    }
+                }
+
+                & span {
+                    display: inline-block;
+                    padding: 0.9em 3em;
+                    border: 1px solid #ccc;
+                    text-transform: uppercase;
+                    color: #ccc;
+                    font-size: 14px;
+
+                    @media screen and (min-width: $w760) {
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+    }
+
+    &__tab-item {
+        display: none;
+
+        &.active {
+            display: block;
+        }
+    }
+
+    & .table {
+        overflow-x: auto;
+
+        & table {
+            min-width: 600px;
+        }
+    }
+
+    & table {
+
+        & td,
+        & th {
+            font-size: 14px;
+
+            @media screen and (min-width: $w1440) {
+                font-size: 16px;
+            }
+        }
+
+        & a {
+            display: block;
+            color: #7A808D;
+            white-space: nowrap;
+            font-size: 14px;
+
+
+            &:hover {
+                text-decoration: underline;
+                color: $main;
+            }
+        }
+
+        & a.link-primary {
+            color: $main;
+
+            @media screen and (min-width: $w1440) {
+                font-size: 16px;
+            }
+
+        }
+    }
+}
+
+.partners-inmap {
+
+    &__map {
+        padding-top: 35%;
+        background-color: #eee;
+        margin-bottom: 25px;
+        position: relative;
+        min-height: 400px;
+
+        & span {
+            @include layer(1);
+        }
+    }
+
+    &__list {
+        @include row-flex;
+    }
+
+    &__item {
+        @include col();
+        @include size(12);
+        @include size-w1440(3);
+        @include size-w1200(4);
+        @include size-w767(6);
+
+        margin-top: 12px;
+        margin-bottom: 12px;
+
+        & .card-shop {
+            height: 100%;
+            cursor: pointer;
+
+
+        }
+    }
+
+
+}
+
+
+
+.loading {
+    width: 100%;
+    overflow: hidden;
+    height: 3px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin-bottom: -3px;
+    z-index: 2;
+}
+
+
+
+.loading .indeterminate {
+    background-color: $main
+}
+
+.loading .indeterminate:before {
+    -webkit-animation: indeterminate 2.1s cubic-bezier(.65, .815, .735, .395) infinite;
+    animation: indeterminate 2.1s cubic-bezier(.65, .815, .735, .395) infinite
+}
+
+.loading .indeterminate:after,
+.loading .indeterminate:before {
+    content: "";
+    position: absolute;
+    background-color: inherit;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    will-change: left, right
+}
+
+.loading .indeterminate:after {
+    -webkit-animation: indeterminate-short 2.1s cubic-bezier(.165, .84, .44, 1) infinite;
+    animation: indeterminate-short 2.1s cubic-bezier(.165, .84, .44, 1) infinite;
+    -webkit-animation-delay: 1.15s;
+    animation-delay: 1.15s
+}

@@ -76,10 +76,10 @@ main {
 }
 
 .container {
-    max-width: 375px;
+    max-width: 425px;
     width: 100%;
     margin: 0 auto;
-    padding: 0 rem(28);
+    padding: 0 rem(25);
     box-sizing: border-box;
 
     &.container--large {
@@ -396,7 +396,7 @@ main {
 
 @mixin section-subtitle {
     font-weight: bold;
-    font-size: 24px;
+    font-size: 26px;
     line-height: 117.2%;
     color: #1B1A1C;
 
@@ -437,4 +437,53 @@ main {
 
 .glide__slides {
     align-items: center;
+}
+
+table {
+
+    border: none;
+    border-collapse: collapse;
+    margin: 35px 0;
+    width: 100%;
+    min-width: 600px;
+
+    & th {
+        padding: 13px 25px;
+        background-color: #F5F5F5;
+        border: none;
+        color: #838383;
+        font-size: 16px;
+        font-weight: normal;
+        text-align: left;
+
+        @media screen and (min-width: $w760) {
+            padding: 15px 20px;
+        }
+
+
+    }
+
+    & td {
+        padding: 15px 25px;
+        border-bottom: 1px solid #CFCFCF;
+        font-size: 16px;
+
+        @media screen and (min-width: $w760) {
+            padding: 15px 20px;
+        }
+
+        & strong {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        &:first-child {
+            font-weight: bold;
+        }
+    }
+
+}
+
+a.link-primary {
+    color: $main;
 }
