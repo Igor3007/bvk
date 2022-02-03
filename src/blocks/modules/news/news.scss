@@ -1,0 +1,141 @@
+.news-list {
+
+    @include row-flex;
+
+    &__main {
+        @include col;
+        @include size(12);
+        @include size-w767(6);
+
+        @media screen and (min-width: $w1440) {
+            padding-right: 50px;
+        }
+    }
+
+    &__aside {
+        @include col;
+        @include size(12);
+        @include size-w767(6);
+
+        @media screen and (min-width: $w1440) {
+            padding-left: 50px;
+        }
+    }
+
+    &__item {
+        margin-bottom: 30px;
+
+        @media screen and (min-width: $w1200) {
+            margin-bottom: 55px;
+        }
+    }
+
+
+
+}
+
+.news-item {
+
+    border-bottom: 1px solid #DCDCDC;
+
+    &--min {
+
+        & .news-item {
+
+            &__wrp {
+                @media screen and (min-width: $w1200) {
+                    display: flex;
+                }
+            }
+
+            &__image {
+
+                width: 100%;
+
+                @media screen and (min-width: $w1200) {
+                    max-width: 38%;
+                    min-width: 38%;
+                    padding-right: 30px;
+                }
+            }
+
+            &__text {
+                flex-grow: 1;
+            }
+        }
+
+    }
+
+    &__image {
+        padding-bottom: 35px;
+
+        & picture {
+            padding-top: 70%;
+            display: block;
+            position: relative;
+            mix-blend-mode: multiply;
+
+
+            & img {
+                @include layer(2);
+                object-fit: cover;
+                object-position: top center;
+                width: 100%;
+                height: 100%;
+                margin: auto;
+            }
+        }
+    }
+
+    &__title {
+
+        padding-bottom: 20px;
+
+        & a {
+            @include section-title;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+
+
+
+        @media screen and (min-width: $w1440) {
+            padding-bottom: 25px;
+        }
+    }
+
+    &__desc {
+
+        color: #7A808D;
+        padding-bottom: 25px;
+
+        & span {
+            @include line-clamp(5);
+        }
+
+        @media screen and (min-width: $w1440) {
+            padding-bottom: 40px;
+        }
+
+    }
+
+    &__date {
+
+        padding-bottom: 30px;
+
+        @media screen and (min-width: $w1440) {
+            padding-bottom: 40px;
+
+        }
+
+        & span {
+            font-size: 12px;
+            border: 2px solid $main;
+            padding: 5px 10px;
+            display: inline-block;
+        }
+
+    }
+}

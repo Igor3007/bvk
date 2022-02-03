@@ -1,6 +1,7 @@
 extends ../layouts/index
 
 include ../../blocks/modules/page-head/page-head
+include ../../blocks/modules/news/news
 
 block variables
   include ../../data/data.pug
@@ -13,6 +14,8 @@ block content
   title: 'Новости',
   breadcrumb: [ 'Главная', 'Новости' ]
 })
+
+  +news()
 
 
 

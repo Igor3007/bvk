@@ -1,0 +1,27 @@
+mixin news
+  section.section-news-list
+    .container
+      .news-list
+        .news-list__main
+          each item in app.news
+            if(!item.modify)
+              .news-list__item: +news-item(item, false)
+
+        .news-list__aside
+          each item in app.news
+            if(item.modify == 'min')
+              .news-list__item: +news-item(item, item.modify)
+
+mixin news-item(data, modify)
+  .news-item(class=(modify ? 'news-item--'+modify : ''))
+    .news-item__wrp
+      if(data.image)
+        .news-item__image
+          a(href='news-details.html'): +picture(data.image)
+      .news-item__text
+        .news-item__title: a(href='news-details.html')= data.title
+        if(data.desc)
+          .news-item__desc 
+            span= data.desc
+        .news-item__date
+          span 21.02.2022 
