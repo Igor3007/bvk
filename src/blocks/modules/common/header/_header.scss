@@ -20,7 +20,8 @@ header {
         @media screen and (min-width: $w760) {
             margin-left: 15px;
             margin-right: none;
-            position: static;
+            position: relative;
+            z-index: 2;
             left: auto;
         }
 

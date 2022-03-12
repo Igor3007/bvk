@@ -1,0 +1,22 @@
+extends ../layouts/index
+
+include ../../blocks/modules/page-head/page-head
+
+include ../../blocks/modules/advantages/advantages
+include ../../blocks/modules/min-about/min-about
+include ../../blocks/modules/how-we-work/how-we-work
+
+block variables
+  include ../../data/data.pug
+  - const title = "bvk"
+
+
+block content
+
+  +advantages()
+  +min-about()
+  +how-we-work()
+
+
+block scripts
+  script(src="/js/page/common.js") 

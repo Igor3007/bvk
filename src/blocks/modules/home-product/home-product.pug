@@ -26,4 +26,7 @@ mixin item-product(data)
 
 mixin all-product
   .all-product
-    .all-product__link: a.link-arr(href='#') Вся продукция BVK
+    .all-product__wrp
+      .all-product__image
+        +picture('/img/common/bg-all-catalog')
+      .all-product__link: a.link-arr(href='catalog.html') Вся продукция BVK

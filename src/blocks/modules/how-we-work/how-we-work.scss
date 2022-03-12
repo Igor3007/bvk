@@ -1,0 +1,104 @@
+.section-how-we-work {
+    padding: 50px 0;
+}
+
+.how-we-work {
+    &__title {
+        @include section-subtitle;
+        text-align: center;
+        padding-bottom: 40px;
+    }
+
+    &__item {
+        margin-bottom: 30px;
+    }
+
+    &__list {}
+}
+
+.item-how-we-work {
+    &__icon {
+        max-width: 118px;
+        border-radius: 50%;
+        overflow: hidden;
+        margin: 0 auto;
+
+        & .bgimage {
+            display: block;
+            padding-top: 100%;
+            background-color: #F4F4F4;
+            background-size: 33% auto;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+    }
+
+    &__step {
+        width: 51px;
+        height: 51px;
+        background-color: $green;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #fff;
+        position: relative;
+        margin: 0 auto;
+        margin-top: -15px;
+        margin-bottom: 30px;
+
+        &::before {
+            position: absolute;
+            background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIiIGhlaWdodD0iMTgiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTYgMThMMTEuMTk2Ljc1SC44MDRMNiAxOHoiIGZpbGw9IiM0OEEyMTYiLz48L3N2Zz4=);
+            left: 50%;
+            top: 100%;
+            content: '';
+            display: block;
+            width: 10px;
+            height: 17px;
+            background-size: contain;
+            background-position: top center;
+            background-repeat: no-repeat;
+            margin-left: -5px;
+            margin-top: -2px;
+        }
+    }
+
+    &__title {
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 27px;
+        text-align: center;
+        letter-spacing: 0.05em;
+        margin-bottom: 10px;
+
+
+    }
+
+    &__desc {
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 19px;
+        text-align: center;
+        letter-spacing: 0.05em;
+        color: #000000;
+        padding-bottom: 30px;
+        max-width: 400px;
+        margin: 0 auto;
+        line-height: 150%;
+    }
+
+    &__btn {
+
+        margin-bottom: 20px;
+        margin-top: 20px;
+
+        & .btn {
+            border-color: $green;
+            color: $green;
+            margin: 0 auto;
+            height: 45px;
+        }
+
+    }
+}

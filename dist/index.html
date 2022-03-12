@@ -44,7 +44,7 @@
               <ul>
                 <li><a href="catalog.html">Каталог продукции</a></li>
                 <li><a href="news.html">Новости</a></li>
-                <li><a href="where-buy.html">Где купить</a></li>
+                <li><a href="partners.html">Где купить</a></li>
                 <li><a href="for-busines.html">Для бизнеса</a></li>
               </ul>
             </nav>
@@ -70,7 +70,7 @@
                         <div class="container">
                           <div class="fb-slide__title">BVK</div>
                           <div class="fb-slide__desc">Профессиональная команда, которая в своей работе ориентируется на зарубежный компьютерный рынок и первой поставляет новинки техники белорусскому потребителю</div>
-                          <div class="fb-slide__btn"><a href="#">
+                          <div class="fb-slide__btn"><a href="catalog.html">
                               <button class="btn btn-line">Продукция</button></a></div>
                         </div>
                       </div>
@@ -95,7 +95,7 @@
                             <div class="fb-slide__left">
                               <div class="fb-slide__title">BVK</div>
                               <div class="fb-slide__desc">Профессиональная команда, которая в своей работе ориентируется на зарубежный компьютерный рынок и первой поставляет новинки техники белорусскому потребителю</div>
-                              <div class="fb-slide__btn"><a href="#">
+                              <div class="fb-slide__btn"><a href="catalog.html">
                                   <button class="btn btn-line">Продукция</button></a></div>
                             </div>
                             <div class="fb-slide__right">
@@ -166,7 +166,14 @@
             </div>
             <div class="home-product__right">
               <div class="all-product">
-                <div class="all-product__link"><a class="link-arr" href="#">Вся продукция BVK</a></div>
+                <div class="all-product__wrp">
+                  <div class="all-product__image">
+                    <picture>
+                      <source srcset="/img/common/bg-all-catalog.webp" type="image/webp"/><img src="/img/common/bg-all-catalog.jpg" loading="lazy" alt="image"/>
+                    </picture>
+                  </div>
+                  <div class="all-product__link"><a class="link-arr" href="catalog.html">Вся продукция BVK</a></div>
+                </div>
               </div>
               <div class="item-product">
                 <div class="item-product__wrp">
@@ -198,8 +205,12 @@
               <div class="home-news__label"><span>Новости</span></div>
               <div class="home-news__title"><a href="#">Процессоры Intel 10-го поколения для настольных ПК!</a></div>
               <div class="home-news__desc">Продуктивно работать и эффективно отдыхать с Intel® Core™ 10-го поколения!</div>
-              <div class="home-news__link"><a href="#">
-                  <button class="btn btn-arr">Все новости</button></a></div>
+              <div class="home-news__link"><a href="news.html">
+                  <button class="btn btn-arr"><span>Все новости</span>
+                    <svg width="25" height="25">
+                      <use xlink:href="/img/sprites/sprite.svg#ic_swiper-next"></use>
+                    </svg>
+                  </button></a></div>
             </div>
           </div>
         </div>
@@ -399,23 +410,23 @@
           </div>
           <div class="block-instagram__list">
             <ul>
-              <li><a href="https://www.instagram.com/p/CYHB7qyMaF2/" target="_blank">
+              <li><a href="https://www.instagram.com/p/CYHB7qyMaF2/" rel="no-follow" target="_blank">
                   <picture>
                     <source srcset="/img/inst/Rectangle79.webp" type="image/webp"/><img src="/img/inst/Rectangle79.jpg" loading="lazy" alt="image"/>
                   </picture><span data-like="12"></span></a></li>
-              <li><a href="https://www.instagram.com/p/CYHB7qyMaF2/" target="_blank">
+              <li><a href="https://www.instagram.com/p/CYHB7qyMaF2/" rel="no-follow" target="_blank">
                   <picture>
                     <source srcset="/img/inst/Rectangle80.webp" type="image/webp"/><img src="/img/inst/Rectangle80.jpg" loading="lazy" alt="image"/>
                   </picture><span data-like="32"></span></a></li>
-              <li><a href="https://www.instagram.com/p/CYHB7qyMaF2/" target="_blank">
+              <li><a href="https://www.instagram.com/p/CYHB7qyMaF2/" rel="no-follow" target="_blank">
                   <picture>
                     <source srcset="/img/inst/Rectangle81.webp" type="image/webp"/><img src="/img/inst/Rectangle81.jpg" loading="lazy" alt="image"/>
                   </picture><span data-like="44"></span></a></li>
-              <li><a href="https://www.instagram.com/p/CYHB7qyMaF2/" target="_blank">
+              <li><a href="https://www.instagram.com/p/CYHB7qyMaF2/" rel="no-follow" target="_blank">
                   <picture>
                     <source srcset="/img/inst/Rectangle82.webp" type="image/webp"/><img src="/img/inst/Rectangle82.jpg" loading="lazy" alt="image"/>
                   </picture><span data-like="789"></span></a></li>
-              <li><a href="https://www.instagram.com/p/CYHB7qyMaF2/" target="_blank">
+              <li><a href="https://www.instagram.com/p/CYHB7qyMaF2/" rel="no-follow" target="_blank">
                   <picture>
                     <source srcset="/img/inst/Rectangle83.webp" type="image/webp"/><img src="/img/inst/Rectangle83.jpg" loading="lazy" alt="image"/>
                   </picture><span data-like="15"></span></a></li>
@@ -452,14 +463,28 @@
                     <ul>
                       <li><a href="catalog.html">Каталог продукции</a></li>
                       <li><a href="news.html">Новости</a></li>
-                      <li><a href="where-buy.html">Где купить</a></li>
+                      <li><a href="partners.html">Где купить</a></li>
                       <li><a href="for-busines.html">Для бизнеса</a></li>
                     </ul>
                   </nav>
                 </div>
                 <div class="main-menu__phones">
-                  <div class="main-menu__number"><a href="#">+7 495 799 34 99</a></div>
+                  <div class="main-menu__number"><a href="#">+375 (33) 799 34 99</a></div>
                   <div class="main-menu__worktime"><span>Работаем с 9.00 до 19.00</span></div>
+                </div>
+              </div>
+            </div>
+            <div class="bottom-popup">
+              <div class="bottom-popup__wrp">
+                <div class="bottom-popup__main">
+                  <div class="bottom-popup__title">Правила обработки персональных данных</div>
+                  <div class="bottom-popup__desc">
+                    Пожалуйста, примите правила обработки персональных данных. Хотите больше узнать о том, как мы обрабатываем ваши данные? <br> 
+                    Ознакомтесь с  нашей <a href="http://">политикой конфиденциальности.</a>
+                  </div>
+                </div>
+                <div class="bottom-popup__btn">
+                  <button class="btn btn-line">Я принимаю</button>
                 </div>
               </div>
             </div>

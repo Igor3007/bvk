@@ -9,13 +9,9 @@
 
     document.querySelector('body').classList.remove('perf-no-animation')
 
-    
-
-      window.addEventListener('load', function(){
-          var newVideo = document.getElementById('promo-video');
-          newVideo.play();
-      })
-      
+    if(document.querySelectorAll('.fb-slide__bg video').length){
+      document.querySelectorAll('.fb-slide__bg video')[0].play()
+    }
       
 
   /******************************************** 
@@ -90,7 +86,7 @@
 
   fb.on(['mount.before'], function() {
     glideCreateBullets(fb.selector, fb)
-    glidePlayVideo(fb, true)
+    //glidePlayVideo(fb, true)
 
   })
 

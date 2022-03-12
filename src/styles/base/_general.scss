@@ -1,5 +1,5 @@
 html {
-    font-family: Uni Neue, Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-family: Uni Neue, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     font-style: normal;
     font-weight: normal;
     font-size: 16px;
@@ -73,6 +73,11 @@ section {
 
 main {
     width: 100%;
+}
+
+.container-w1000 {
+    max-width: 1000px;
+    margin-right: auto;
 }
 
 .container {
@@ -201,7 +206,7 @@ main {
 
     & table {
 
-        border: none;
+        border: 1px solid #cacaca;
         border-collapse: collapse;
         margin: 35px 0;
         width: 100%;
@@ -209,62 +214,75 @@ main {
 
         & th {
             padding: 13px 25px;
-            background-color: #F5F5F5;
-            border: none;
-            color: #838383;
-            font-size: 16px;
+            background-color: #EFEFEF;
+            color: #000;
+            text-decoration: transparent;
+            font-size: 14px;
             font-weight: normal;
             text-align: left;
-
-            @media screen and (min-width: $w760) {
-                padding: 23px 35px;
-            }
+            text-align: center;
+            border: 1px solid #CACACA;
+            border-bottom-color: transparent;
 
             &:first-child {
-                border-radius: 10px 0 0 10px;
+                text-align: left;
             }
 
-            &:last-child {
-                border-radius: 0 10px 10px 0;
+            @media screen and (min-width: $w760) {
+                padding: 15px 25px;
+                font-size: 16px;
             }
+
+
         }
 
         & td {
             padding: 20px 25px;
-            border-bottom: 1px solid #CACACA;
-            font-size: 16px;
+            border: 1px solid #CACACA;
+            font-size: 14px;
+            font-weight: normal;
+            text-align: center;
+            min-width: 150px;
+
+            &:first-child {
+                text-align: left;
+            }
 
             @media screen and (min-width: $w760) {
-                padding: 35px 35px;
+                padding: 35px 25px;
+                font-size: 16px;
             }
 
             & strong {
                 display: block;
                 margin-bottom: 10px;
             }
+
+            &:first-child {
+                font-weight: normal;
+            }
         }
 
     }
 
     & a {
-        color: $red;
+        color: $main;
         text-decoration: underline;
     }
 
     & p {
-        font-size: 16px;
+        font-size: 14px;
         margin: 25px 0;
         color: #666;
         line-height: 150%;
 
         @media screen and (min-width: $w760) {
-            font-size: 18px;
+            font-size: 16px;
         }
     }
 
     & ul {
 
-        @include row-flex;
         padding: 20px 0;
 
         @media screen and (min-width: $w760) {
@@ -273,15 +291,15 @@ main {
 
         & li {
 
-            @include col;
-            @include size(12);
-            @include size-w992(4);
-            @include size-w767(6);
-
             position: relative;
-            padding-left: 30px;
-            font-size: 16px;
+            padding-left: 20px;
+            font-size: 14px;
             padding-bottom: 20px;
+
+            @media screen and (min-width: $w760) {
+                font-size: 16px;
+                padding-left: 30px;
+            }
 
             &:last-child {
                 padding-bottom: 0;
@@ -289,15 +307,14 @@ main {
 
             &::before {
                 content: '';
-                width: 15px;
-                height: 8px;
+                width: 6px;
+                height: 6px;
                 display: block;
-                border-left: 4px solid $red;
-                border-bottom: 4px solid $red;
-                transform: rotate(-45deg);
                 position: absolute;
                 left: 0;
-                top: 2px;
+                top: 0.5em;
+                border-radius: 50%;
+                background-color: $main;
             }
         }
     }
@@ -311,52 +328,35 @@ main {
 
     & ol {
         counter-reset: number-list 00;
-        padding-left: 0;
         padding: 20px 0;
-
-        @include row-flex;
-
 
         &>li {
 
-            @include col;
-            @include size(12);
-            @include size-w767(6);
-
             counter-increment: number-list 1;
             list-style-type: none;
-            padding-left: 60px;
             position: relative;
-            min-height: 40px;
             margin-bottom: 15px;
-            font-weight: bold;
             color: #000;
+            padding-left: 20px;
+            font-size: 14px;
 
             @media screen and (min-width: $w760) {
-                min-height: 45px;
-                padding-left: 70px;
+                font-size: 16px;
+                padding-left: 30px;
             }
+
+
 
             &::before {
                 content: counter(number-list);
-                width: 40px;
-                height: 40px;
-                border-radius: 10px;
-                background-color: #1B1A1C;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                font-size: 18px;
-                color: #fff;
+                color: $main;
                 font-weight: bold;
+                min-width: 35px;
+                display: inline-block;
                 position: absolute;
                 left: 0;
-                top: -0.4em;
 
-                @media screen and (min-width: $w760) {
-                    width: 45px;
-                    height: 45px;
-                }
+                @media screen and (min-width: $w760) {}
             }
         }
     }
@@ -452,12 +452,13 @@ table {
         background-color: #F5F5F5;
         border: none;
         color: #838383;
-        font-size: 16px;
+        font-size: 14px;
         font-weight: normal;
         text-align: left;
 
         @media screen and (min-width: $w760) {
             padding: 15px 20px;
+            font-size: 16px;
         }
 
 
@@ -466,10 +467,11 @@ table {
     & td {
         padding: 15px 25px;
         border-bottom: 1px solid #CFCFCF;
-        font-size: 16px;
+        font-size: 14px;
 
         @media screen and (min-width: $w760) {
             padding: 15px 20px;
+            font-size: 16px;
         }
 
         & strong {

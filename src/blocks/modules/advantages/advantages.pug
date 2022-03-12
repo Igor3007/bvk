@@ -1,0 +1,17 @@
+mixin advantages
+  .section-advantages
+    .container
+      .advantages
+        .advantages__intr Почему стоит выбирать именно нас?
+        .advantages__title Мы сформировали обширный штат первоклассных специалистов и наладили оптимальную работу и взаимодействие всех отделов компании. В связи с этим заказы клиентов выполняются и доставляются в кратчайший  срок.
+        .advantages__desc Кроме этого, своими преимуществами мы считаем следующие моменты:
+        .advantages__list
+          each item in app.advantages
+            .advantages__item: +item-advantages(item)
+
+
+mixin item-advantages(data)
+  .item-advantages
+    .item-advantages__image: +bgimage(data.image)
+    .item-advantages__title= data.title
+    .item-advantages__desc= data.desc

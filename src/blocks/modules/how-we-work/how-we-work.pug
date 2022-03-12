@@ -1,0 +1,30 @@
+mixin how-we-work
+  .section-how-we-work
+    .container
+      .how-we-work 
+        .how-we-work__title Как мы работаем
+        .how-we-work__list
+          .how-we-work__item
+            .item-how-we-work
+              .item-how-we-work__icon
+                +bgimage('/img/common/003-phone-call.svg')
+              .item-how-we-work__step 1
+              .item-how-we-work__title Для начала сотрудничества
+              .item-how-we-work__btn
+                button.btn.btn-line оставьте заявку
+              .item-how-we-work__desc 
+                | или звоните 
+                a(href='tel:+375296501078') +375 29 650 10 78
+          each item, index in app.howwork
+            .how-we-work__item
+              +item-how-we-work(item, index)
+
+
+
+mixin item-how-we-work(data, step)
+  .item-how-we-work
+    .item-how-we-work__icon
+      +bgimage(data.icon)
+    .item-how-we-work__step= step+2
+    .item-how-we-work__title= data.title
+    .item-how-we-work__desc= data.desc

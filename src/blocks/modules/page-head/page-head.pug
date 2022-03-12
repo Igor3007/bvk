@@ -9,3 +9,12 @@ mixin page-head(data)
         .page-head__breadcrumb
           +breadcrumb(data.breadcrumb)
 
+mixin page-head-news(data)
+  section.section-page-head.section-page-head--news
+    .container
+      .page-head
+        .page-head__title
+          h1= data.title
+        .page-head__breadcrumb
+          +breadcrumb(data.breadcrumb)
+

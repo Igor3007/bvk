@@ -26,7 +26,7 @@
         margin-bottom: 30px;
 
         @media screen and (min-width: $w1200) {
-            margin-bottom: 55px;
+            margin-bottom: 35px;
         }
     }
 
@@ -61,6 +61,10 @@
 
             &__text {
                 flex-grow: 1;
+            }
+
+            &__desc {
+                padding-bottom: 25px;
             }
         }
 
@@ -126,7 +130,7 @@
         padding-bottom: 30px;
 
         @media screen and (min-width: $w1440) {
-            padding-bottom: 40px;
+            padding-bottom: 35px;
 
         }
 
@@ -138,4 +142,6 @@
         }
 
     }
+
+
 }

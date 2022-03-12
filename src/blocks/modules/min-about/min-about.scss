@@ -1,0 +1,83 @@
+.section-min-about {
+    background-color: #48A216;
+    padding: 50px 0 70px 0;
+    position: relative;
+    margin-top: 40px;
+    margin-bottom: 30px;
+}
+
+.min-about {
+
+    &__ball {
+        position: absolute;
+        top: -35px;
+        right: 10%;
+
+        @media screen and (min-width: $w992) {
+            top: -35px;
+            right: 30%;
+        }
+
+        & img {
+            max-width: 100px;
+
+            @media screen and (min-width: $w992) {
+                max-width: 100%;
+            }
+        }
+    }
+
+    &__ballblur {
+        position: absolute;
+        bottom: -24px;
+        left: 6%;
+
+        @media screen and (min-width: $w992) {
+            bottom: -30px;
+            left: 20%;
+        }
+
+        & img {
+            max-width: 50px;
+
+            @media screen and (min-width: $w992) {
+                max-width: 100%;
+            }
+        }
+    }
+
+    &__logo {
+        padding-bottom: 25px;
+        margin-top: -25px;
+
+
+        & svg {
+            max-width: 130px;
+            margin: 0 auto;
+            display: block;
+        }
+    }
+
+    &__title {
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 27px;
+        text-align: center;
+        letter-spacing: 0.05em;
+        color: #FFFFFF;
+        padding-bottom: 20px;
+        max-width: 815px;
+        margin: 0 auto;
+    }
+
+    &__text {
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 21px;
+        text-align: center;
+        letter-spacing: 0.05em;
+        color: #FFFFFF;
+        max-width: 815px;
+        margin: 0 auto;
+    }
+}

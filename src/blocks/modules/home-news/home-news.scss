@@ -52,6 +52,20 @@
             display: inline-block;
             margin: 0 auto;
         }
+
+        & button {
+            display: inline-flex;
+
+            & svg {
+                width: 1em;
+                height: 1em;
+                filter: invert(1);
+                margin-left: 1em;
+                margin-right: -10px;
+                position: relative;
+                left: 10px;
+            }
+        }
     }
 
     &__title {

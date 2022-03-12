@@ -1,6 +1,13 @@
 .section-page-head {
     padding-top: 35px;
     padding-bottom: 10px;
+
+
+    @media screen and (min-width: $w1200) {
+        padding-top: 75px;
+        padding-bottom: 30px;
+    }
+
 }
 
 .page-head {

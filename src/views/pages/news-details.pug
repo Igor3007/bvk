@@ -1,0 +1,24 @@
+extends ../layouts/index
+
+include ../../blocks/modules/page-head/page-head
+include ../../blocks/modules/news-detail/news-detail
+
+block variables
+  include ../../data/data.pug
+  - const title = "bvk"
+
+
+block content
+
+  +page-head-news({
+  title: '«Виртуальный офис» с Microsoft Teams и Logitech!',
+  breadcrumb: [ 'Главная', 'Новости', '«Виртуальный офис» с Microsoft Teams и Logitech!' ]
+})
+
+  +news-detail()
+
+
+
+block scripts
+  script(src="/js/page/common.js") 
+
